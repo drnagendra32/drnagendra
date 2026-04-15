@@ -6,208 +6,229 @@
 <title>Divya Dental Clinic</title>
 
 <style>
+
+/* GLOBAL */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f8fb;
 }
 
-/* Header */
-header {
-    background: #0077b6;
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0,119,182,0.85);
     color: white;
-    padding: 20px;
+    padding: 12px;
     text-align: center;
+    font-weight: bold;
+    z-index: 1000;
 }
 
-/* Hero */
+/* HERO */
 .hero {
+    height: 90vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('IMG_20250830_184129621(1).jpg');
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-align: center;
-    padding: 80px 20px;
 }
 
 .hero h1 {
-    font-size: 40px;
+    font-size: 42px;
 }
 
-/* Section */
+.hero p {
+    font-size: 18px;
+}
+
+.btn {
+    background: #00b4d8;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+/* SECTION */
 section {
-    padding: 40px 20px;
-    max-width: 1000px;
+    padding: 60px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
-/* Services */
+/* HEADER INFO */
+.header-info {
+    text-align: center;
+}
+
+.header-info h2 {
+    margin-bottom: 5px;
+}
+
+/* SERVICES */
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
     gap: 20px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* Gallery */
-.gallery {
+.card:hover {
+    transform: translateY(-8px);
+}
+
+/* GALLERY + BEFORE AFTER */
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 15px;
 }
 
-.gallery img {
+.grid img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
-/* Contact */
-.contact {
-    text-align: center;
+.grid img:hover {
+    transform: scale(1.05);
 }
 
-/* Button */
-.btn {
-    background: #0077b6;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
     background: #023e8a;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
 }
 
-/* Premium WhatsApp Button */
-.whatsapp-premium {
+/* FLOAT BUTTONS */
+.float-btn {
     position: fixed;
-    bottom: 20px;
     right: 20px;
-    background: linear-gradient(135deg, #25D366, #128C7E);
+    z-index: 999;
+}
+
+.whatsapp {
+    bottom: 20px;
+    background: #25D366;
+}
+
+.call {
+    bottom: 90px;
+    background: #0077b6;
+}
+
+.float-btn a {
+    display: block;
     color: white;
-    padding: 12px 18px;
+    padding: 15px 18px;
     border-radius: 50px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-.whatsapp-premium:hover {
-    transform: scale(1.08);
+/* MOBILE */
+@media(max-width:600px){
+    .hero h1 { font-size: 28px; }
 }
 
-.wa-icon {
-    font-size: 22px;
-}
-
-@media (max-width: 600px) {
-    .wa-text {
-        display: none;
-    }
-
-    .whatsapp-premium {
-        width: 60px;
-        height: 60px;
-        justify-content: center;
-        border-radius: 50%;
-        padding: 0;
-    }
-}
 </style>
 
 </head>
 
 <body>
 
-<header>
-    <h2>दिव्य डेंटल क्लिनिक</h2>
-    <h3>Dr. Nagendra Chauhan, B.D.S.</h3>
-    <p>Dental Surgeon & Implantologist</p>
-
-    <div style="font-size:14px; margin-top:10px;">
-        <p><strong>Professional Memberships</strong></p>
-        <p>
-            AOI – All India Oral Implantology (Life Member)<br>
-            ISDID – Indian Society of Digital & Implant Dentistry (Life Member)<br>
-            IDA – Indian Dental Association (Life Member)
-        </p>
-    </div>
-</header>
+<div class="navbar">
+    DIVYA DENTAL CLINIC
+</div>
 
 <div class="hero">
-    <h1>Your Smile, Our Priority</h1>
-    <p>Advanced Dental Care with Modern Technology</p>
-    <br>
-    <a href="tel:9415964504" class="btn">Call Now</a>
+    <div>
+        <h1>Your Smile, Our Priority</h1>
+        <p>Advanced Dental Care with Modern Technology</p>
+        <br>
+        <a href="tel:9415964504" class="btn">Call Now</a>
+    </div>
 </div>
+
+<section class="header-info">
+    <h2>Dr. Nagendra Chauhan, B.D.S.</h2>
+    <p>Dental Surgeon & Implantologist</p>
+    <p>
+        AOI (Life Member) | ISDID (Life Member) | IDA (Life Member)
+    </p>
+</section>
 
 <section>
     <h2>Our Services</h2>
     <div class="services">
-        <div class="card">Root Canal Treatment</div>
-        <div class="card">Tooth Extraction</div>
         <div class="card">Dental Implants</div>
-        <div class="card">Teeth Cleaning</div>
-        <div class="card">Cosmetic Dentistry</div>
+        <div class="card">Zirconia Crown</div>
+        <div class="card">Root Canal Treatment</div>
+        <div class="card">Teeth Whitening</div>
+        <div class="card">Scaling & Cleaning</div>
+        <div class="card">Dentures</div>
     </div>
 </section>
 
 <section>
     <h2>Gallery</h2>
-    <div class="gallery">
+    <div class="grid">
         <img src="IMG_20250830_184129621(1).jpg">
         <img src="IMG_20260120_162030193.jpg">
         <img src="IMG_20260210_131641255.jpg">
-        <img src="IMG_20260214_121449160.jpg">
-        <img src="IMG_20260214_121503020.jpg">
-        <img src="IMG_20260214_121515651.jpg">
     </div>
 </section>
 
-<section class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 9415964504</p>
-    <br>
-    <a href="https://maps.app.goo.gl/m8wz8B63sZJboyrg7" target="_blank" class="btn">
-        View on Google Maps
-    </a>
+<section>
+    <h2>Before & After Treatment</h2>
+    <div class="grid">
+        <img src="IMG_20210913_141146-COLLAGE.jpg">
+        <img src="20230618_225728-COLLAGE(1).jpg">
+        <img src="20230618_224305-COLLAGE(1).jpg">
+        <img src="20230808_155825-COLLAGE(1).jpg">
+        <img src="20231029_115022-COLLAGE.jpg">
+        <img src="IMG_20250621_132154342-COLLAGE.jpg">
+    </div>
 </section>
 
-<section>
-    <h2>Location</h2>
+<section style="text-align:center;">
+    <h2>Visit Us</h2>
     <iframe 
-        src="https://maps.google.com/maps?q=divya%20dental%20clinic&t=&z=13&ie=UTF8&iwloc=&output=embed"
-        width="100%" height="300" style="border:0;">
-    </iframe>
+    src="https://maps.google.com/maps?q=divya%20dental%20clinic&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    width="100%" height="300"></iframe>
 </section>
 
 <footer>
-    <p>© 2026 Divya Dental Clinic | All Rights Reserved</p>
+    <h3>DIVYA DENTAL CLINIC</h3>
+    <p>Near Sarvoday Inter College, Ghosi–Mau 275304</p>
+    <p>📞 9415964504</p>
 </footer>
 
-<!-- Premium WhatsApp Button -->
-<a href="https://wa.me/919415964504?text=Hello%20Doctor%2C%20I%20want%20to%20book%20an%20appointment" 
-   class="whatsapp-premium" target="_blank">
-   <span class="wa-icon">💬</span>
-   <span class="wa-text">Chat on WhatsApp</span>
-</a>
+<!-- FLOAT BUTTONS -->
+<div class="float-btn whatsapp">
+    <a href="https://wa.me/919415964504">WhatsApp</a>
+</div>
+
+<div class="float-btn call">
+    <a href="tel:9415964504">Call Now</a>
+</div>
 
 </body>
 </html>
