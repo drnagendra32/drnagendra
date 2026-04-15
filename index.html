@@ -7,72 +7,85 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            margin-left: 40px;
-            margin-right: 40px;
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 40px;
         }
         .gallery-item {
             position: relative;
             overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
         }
         .gallery-item img {
             width: 100%;
             height: auto;
-            display: block;
         }
-        .title {
+        .gallery-item-title {
             position: absolute;
-            bottom: 0;
+            bottom: -30px;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0,0,0,0.5);
             color: white;
             text-align: center;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
+            transition: bottom 0.3s;
         }
-        .gallery-item:hover .title {
-            transform: translateY(0);
+        .gallery-item:hover .gallery-item-title {
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to My Clinic</h1>
-        <section class="gallery">
-            <div class="gallery-item">
-                <img src="https://raw.githubusercontent.com/user/repo/branch/image1.jpg" alt="Clinic Image 1">
-                <div class="title">क्लिनिक की तस्वीर</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://raw.githubusercontent.com/user/repo/branch/image2.jpg" alt="Clinic Image 2">
-                <div class="title">क्लिनिक का दृश्य</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://raw.githubusercontent.com/user/repo/branch/image3.jpg" alt="Equipment">
-                <div class="title">उपकरण</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://raw.githubusercontent.com/user/repo/branch/image4.jpg" alt="Clinic Interior">
-                <div class="title">क्लिनिक इंटीरियर</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://raw.githubusercontent.com/user/repo/branch/image5.jpg" alt="Operation Room">
-                <div class="title">ऑपरेशन रूम</div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://raw.githubusercontent.com/user/repo/branch/image6.jpg" alt="Patient Area">
-                <div class="title">रोगी क्षेत्र</div>
-            </div>
-        </section>
-    </div>
+    <header>
+        <h1>My Clinic</h1>
+    </header>
+    <section class="about">
+        <h2>About Us</h2>
+        <p>We provide the best medical services.</p>
+    </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <p>Explore our services.</p>
+    </section>
+    <section class="appointments">
+        <h2>Appointments</h2>
+        <p>Schedule your appointments online.</p>
+    </section>
+    <section class="location">
+        <h2>Location</h2>
+        <p>Find us at our address.</p>
+    </section>
+    <section class="gallery">
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/clinic_photo.jpg" alt="Clinic Photo">
+            <div class="gallery-item-title">क्लिनिक की तस्वीर</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/clinic_view.jpg" alt="Clinic View">
+            <div class="gallery-item-title">क्लिनिक का दृश्य</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/equipment.jpg" alt="Equipment">
+            <div class="gallery-item-title">उपकरण</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/interior.jpg" alt="Interior">
+            <div class="gallery-item-title">क्लिनिक इंटीरियर</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/operation_room.jpg" alt="Operation Room">
+            <div class="gallery-item-title">ऑपरेशन रूम</div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/patient_area.jpg" alt="Patient Area">
+            <div class="gallery-item-title">रोगी क्षेत्र</div>
+        </div>
+    </section>
 </body>
 </html>
