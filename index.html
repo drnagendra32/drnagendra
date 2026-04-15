@@ -18,18 +18,16 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    backdrop-filter: blur(10px);
-    background: rgba(0,119,182,0.85);
+    background: rgba(0,119,182,0.9);
     color: white;
     padding: 12px;
     text-align: center;
     font-weight: bold;
-    z-index: 1000;
 }
 
 /* HERO */
 .hero {
-    height: 90vh;
+    height: 85vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url('IMG_20250830_184129621(1).jpg');
     background-size: cover;
@@ -38,14 +36,6 @@ body {
     justify-content: center;
     color: white;
     text-align: center;
-}
-
-.hero h1 {
-    font-size: 42px;
-}
-
-.hero p {
-    font-size: 18px;
 }
 
 .btn {
@@ -68,30 +58,31 @@ section {
     text-align: center;
 }
 
-.header-info h2 {
-    margin-bottom: 5px;
-}
-
-/* SERVICES */
-.services {
+/* PREMIUM SERVICES */
+.services-premium {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
+.card-premium {
+    background: linear-gradient(135deg, #ffffff, #f1faff);
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-.card:hover {
-    transform: translateY(-8px);
+.card-premium:hover {
+    transform: translateY(-10px);
 }
 
-/* GALLERY + BEFORE AFTER */
+.icon {
+    font-size: 30px;
+}
+
+/* GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -100,12 +91,33 @@ section {
 
 .grid img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 10px;
     transition: 0.3s;
 }
 
 .grid img:hover {
     transform: scale(1.05);
+}
+
+/* COMPARE */
+.compare {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.compare-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+}
+
+.vs {
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
 }
 
 /* FOOTER */
@@ -120,33 +132,22 @@ footer {
 .float-btn {
     position: fixed;
     right: 20px;
-    z-index: 999;
 }
 
-.whatsapp {
-    bottom: 20px;
-    background: #25D366;
-}
-
-.call {
-    bottom: 90px;
-    background: #0077b6;
-}
+.whatsapp { bottom: 20px; }
+.call { bottom: 90px; }
 
 .float-btn a {
     display: block;
+    background: #25D366;
     color: white;
-    padding: 15px 18px;
+    padding: 12px 15px;
     border-radius: 50px;
     text-decoration: none;
     margin-top: 10px;
-    font-weight: bold;
 }
 
-/* MOBILE */
-@media(max-width:600px){
-    .hero h1 { font-size: 28px; }
-}
+.call a { background: #0077b6; }
 
 </style>
 
@@ -154,9 +155,7 @@ footer {
 
 <body>
 
-<div class="navbar">
-    दिव्य डेंटल क्लिनिक
-</div>
+<div class="navbar">दिव्य डेंटल क्लिनिक</div>
 
 <div class="hero">
     <div>
@@ -170,64 +169,107 @@ footer {
 <section class="header-info">
     <h2>Dr. Nagendra Chauhan, B.D.S.</h2>
     <p>Dental Surgeon & Implantologist</p>
-    <p>
-        AOI (Life Member) | ISDID (Life Member) | IDA (Life Member)
-    </p>
+    <p>AOI | ISDID | IDA (Life Member)</p>
 </section>
 
+<!-- SERVICES -->
 <section>
-    <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">Dental Implants</div>
-        <div class="card">Zirconia Crown</div>
-        <div class="card">Root Canal Treatment</div>
-        <div class="card">Teeth Whitening</div>
-        <div class="card">Scaling & Cleaning</div>
-        <div class="card">Dentures</div>
-    </div>
+<h2 style="text-align:center;">Our Services / हमारी सेवाएं</h2>
+<div class="services-premium">
+
+<div class="card-premium"><div class="icon">🦷</div><h3>Dental Implants</h3><p>डेंटल इम्प्लांट</p><span>Permanent tooth replacement</span></div>
+
+<div class="card-premium"><div class="icon">✨</div><h3>Zirconia Crown</h3><p>ज़िरकोनिया क्राउन</p><span>Strong & aesthetic teeth</span></div>
+
+<div class="card-premium"><div class="icon">🔬</div><h3>Root Canal Treatment</h3><p>रूट कैनाल</p><span>Pain-free treatment</span></div>
+
+<div class="card-premium"><div class="icon">😁</div><h3>Teeth Whitening</h3><p>दांत सफेद करना</p><span>Bright smile</span></div>
+
+<div class="card-premium"><div class="icon">🪥</div><h3>Scaling & Cleaning</h3><p>दांत सफाई</p><span>Healthy gums</span></div>
+
+<div class="card-premium"><div class="icon">🦷</div><h3>Fixed Teeth</h3><p>फिक्स दांत</p><span>Permanent solution</span></div>
+
+<div class="card-premium"><div class="icon">📐</div><h3>Braces</h3><p>ब्रेसेस</p><span>Teeth alignment</span></div>
+
+<div class="card-premium"><div class="icon">👶</div><h3>Kids Dental</h3><p>बच्चों का इलाज</p><span>Gentle care</span></div>
+
+<div class="card-premium"><div class="icon">🩻</div><h3>Digital X-Ray</h3><p>डिजिटल एक्स-रे</p><span>Accurate diagnosis</span></div>
+
+<div class="card-premium"><div class="icon">🛡️</div><h3>Caries Prevention</h3><p>कीड़ा बचाव</p><span>Protect teeth</span></div>
+
+<div class="card-premium"><div class="icon">🌿</div><h3>Bad Breath</h3><p>मुंह की बदबू</p><span>Fresh breath</span></div>
+
+</div>
 </section>
 
+<!-- GALLERY -->
 <section>
-    <h2>Gallery</h2>
-    <div class="grid">
-        <img src="IMG_20250830_184129621(1).jpg">
-        <img src="IMG_20260120_162030193.jpg">
-        <img src="IMG_20260210_131641255.jpg">
-    </div>
+<h2>Gallery</h2>
+<div class="grid">
+<img src="IMG_20250830_184129621(1).jpg">
+<img src="IMG_20260120_162030193.jpg">
+<img src="IMG_20260210_131641255.jpg">
+</div>
 </section>
 
+<!-- BEFORE AFTER -->
 <section>
-    <h2>Before & After Treatment</h2>
-    <div class="grid">
-        <img src="IMG_20210913_141146-COLLAGE.jpg">
-        <img src="20230618_225728-COLLAGE(1).jpg">
-        <img src="20230618_224305-COLLAGE(1).jpg">
-        <img src="20230808_155825-COLLAGE(1).jpg">
-        <img src="20231029_115022-COLLAGE.jpg">
-        <img src="IMG_20250621_132154342-COLLAGE.jpg">
-    </div>
+<h2>Before & After Treatment</h2>
+<div class="grid">
+<img src="IMG_20210913_141146-COLLAGE.jpg">
+<img src="20230618_225728-COLLAGE(1).jpg">
+<img src="20230618_224305-COLLAGE(1).jpg">
+<img src="20230808_155825-COLLAGE(1).jpg">
+<img src="20231029_115022-COLLAGE.jpg">
+<img src="IMG_20250621_132154342-COLLAGE.jpg">
+</div>
 </section>
 
+<!-- IMPLANT VS BRIDGE -->
+<section>
+<h2>Implant vs Bridge</h2>
+<div class="compare">
+<div class="compare-card">
+<h3>Implant</h3>
+<ul>
+<li>No damage to other teeth</li>
+<li>Long lasting</li>
+<li>Natural feel</li>
+</ul>
+</div>
+
+<div class="vs">VS</div>
+
+<div class="compare-card">
+<h3>Bridge</h3>
+<ul>
+<li>Teeth trimming needed</li>
+<li>Less lifespan</li>
+<li>Less natural</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- MAP -->
 <section style="text-align:center;">
-    <h2>Visit Us</h2>
-    <iframe 
-    src="https://maps.google.com/maps?q=divya%20dental%20clinic&t=&z=13&ie=UTF8&iwloc=&output=embed"
-    width="100%" height="300"></iframe>
+<h2>Visit Us</h2>
+<iframe src="https://maps.google.com/maps?q=divya%20dental%20clinic&output=embed" width="100%" height="300"></iframe>
 </section>
 
 <footer>
-    <h3>दिव्य डेंटल क्लिनिक</h3>
-    <p>Near Sarvoday Inter College, Ghosi–Mau 275304</p>
-    <p>📞 9415964504</p>
+<h3>दिव्य डेंटल क्लिनिक</h3>
+<p>Near Sarvoday Inter College, Ghosi–Mau 275304</p>
+<p>📞 9415964504</p>
 </footer>
 
 <!-- FLOAT BUTTONS -->
 <div class="float-btn whatsapp">
-    <a href="https://wa.me/919415964504">WhatsApp</a>
+<a href="https://wa.me/919415964504">WhatsApp</a>
 </div>
 
 <div class="float-btn call">
-    <a href="tel:9415964504">Call Now</a>
+<a href="tel:9415964504">Call</a>
 </div>
 
 </body>
