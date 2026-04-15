@@ -1,91 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Clinic</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            margin: 40px;
-        }
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-        }
-        .gallery-item-title {
-            position: absolute;
-            bottom: -30px;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.5);
-            color: white;
-            text-align: center;
-            transition: bottom 0.3s;
-        }
-        .gallery-item:hover .gallery-item-title {
-            bottom: 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Divya Dental Clinic</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+}
+
+/* Header */
+header {
+    background: #0077b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('IMG_20250830_184129621(1).jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+/* Section */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+/* Button */
+.btn {
+    background: #0077b6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Premium WhatsApp Button */
+.whatsapp-premium {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-premium:hover {
+    transform: scale(1.08);
+}
+
+.wa-icon {
+    font-size: 22px;
+}
+
+@media (max-width: 600px) {
+    .wa-text {
+        display: none;
+    }
+
+    .whatsapp-premium {
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 0;
+    }
+}
+</style>
+
 </head>
+
 <body>
-    <header>
-        <h1>My Clinic</h1>
-    </header>
-    <section class="about">
-        <h2>About Us</h2>
-        <p>We provide the best medical services.</p>
-    </section>
-    <section class="services">
-        <h2>Our Services</h2>
-        <p>Explore our services.</p>
-    </section>
-    <section class="appointments">
-        <h2>Appointments</h2>
-        <p>Schedule your appointments online.</p>
-    </section>
-    <section class="location">
-        <h2>Location</h2>
-        <p>Find us at our address.</p>
-    </section>
-    <section class="gallery">
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/clinic_photo.jpg" alt="Clinic Photo">
-            <div class="gallery-item-title">क्लिनिक की तस्वीर</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/clinic_view.jpg" alt="Clinic View">
-            <div class="gallery-item-title">क्लिनिक का दृश्य</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/equipment.jpg" alt="Equipment">
-            <div class="gallery-item-title">उपकरण</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/interior.jpg" alt="Interior">
-            <div class="gallery-item-title">क्लिनिक इंटीरियर</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/operation_room.jpg" alt="Operation Room">
-            <div class="gallery-item-title">ऑपरेशन रूम</div>
-        </div>
-        <div class="gallery-item">
-            <img src="https://raw.githubusercontent.com/drnagendra32/drnagendra/main/images/patient_area.jpg" alt="Patient Area">
-            <div class="gallery-item-title">रोगी क्षेत्र</div>
-        </div>
-    </section>
+
+<header>
+    <h2>दिव्य डेंटल क्लिनिक</h2>
+    <h3>Dr. Nagendra Chauhan, B.D.S.</h3>
+    <p>Dental Surgeon & Implantologist</p>
+
+    <div style="font-size:14px; margin-top:10px;">
+        <p><strong>Professional Memberships</strong></p>
+        <p>
+            AOI – All India Oral Implantology (Life Member)<br>
+            ISDID – Indian Society of Digital & Implant Dentistry (Life Member)<br>
+            IDA – Indian Dental Association (Life Member)
+        </p>
+    </div>
+</header>
+
+<div class="hero">
+    <h1>Your Smile, Our Priority</h1>
+    <p>Advanced Dental Care with Modern Technology</p>
+    <br>
+    <a href="tel:9415964504" class="btn">Call Now</a>
+</div>
+
+<section>
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">Root Canal Treatment</div>
+        <div class="card">Tooth Extraction</div>
+        <div class="card">Dental Implants</div>
+        <div class="card">Teeth Cleaning</div>
+        <div class="card">Cosmetic Dentistry</div>
+    </div>
+</section>
+
+<section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+        <img src="IMG_20250830_184129621(1).jpg">
+        <img src="IMG_20260120_162030193.jpg">
+        <img src="IMG_20260210_131641255.jpg">
+        <img src="IMG_20260214_121449160.jpg">
+        <img src="IMG_20260214_121503020.jpg">
+        <img src="IMG_20260214_121515651.jpg">
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact Us</h2>
+    <p>📞 9415964504</p>
+    <br>
+    <a href="https://maps.app.goo.gl/m8wz8B63sZJboyrg7" target="_blank" class="btn">
+        View on Google Maps
+    </a>
+</section>
+
+<section>
+    <h2>Location</h2>
+    <iframe 
+        src="https://maps.google.com/maps?q=divya%20dental%20clinic&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="300" style="border:0;">
+    </iframe>
+</section>
+
+<footer>
+    <p>© 2026 Divya Dental Clinic | All Rights Reserved</p>
+</footer>
+
+<!-- Premium WhatsApp Button -->
+<a href="https://wa.me/919415964504?text=Hello%20Doctor%2C%20I%20want%20to%20book%20an%20appointment" 
+   class="whatsapp-premium" target="_blank">
+   <span class="wa-icon">💬</span>
+   <span class="wa-text">Chat on WhatsApp</span>
+</a>
+
 </body>
 </html>
