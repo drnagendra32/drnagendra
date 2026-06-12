@@ -26,25 +26,62 @@ body {
     font-weight: bold;
 }
 
-/* HERO */
+/* PREMIUM HERO */
 .hero {
-    height: 85vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    min-height: 95vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
     url('IMG_20250830_184129621(1).jpg');
     background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+
+.hero .clinic-name {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #ffd60a;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.hero .doctor {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #caf0f8;
 }
 
 .btn {
-    background: #00b4d8;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
+    background: linear-gradient(135deg,#00b4d8,#0077b6);
+    padding: 16px 35px;
+    border-radius: 50px;
     color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 /* SECTION */
@@ -155,14 +192,28 @@ footer {
 
 <body>
 
-<div class="navbar">दिव्य डेंटल क्लिनिक</div>
-
 <div class="hero">
-    <div>
+    <div class="hero-content">
+
+        <div class="clinic-name">
+            🦷 दिव्य डेंटल क्लिनिक
+        </div>
+
         <h1>Your Smile, Our Priority</h1>
-        <p>Advanced Dental Care with Modern Technology</p>
-        <br>
-        <a href="tel:9415964504" class="btn">Call Now</a>
+
+        <p>
+            Advanced Dental Care • Dental Implants • Root Canal • Zirconia Crowns
+        </p>
+
+        <div class="doctor">
+            Dr. Nagendra Chauhan, B.D.S.<br>
+            Dental Surgeon & Implantologist
+        </div>
+
+        <a href="tel:9415964504" class="btn">
+            📞 Book Appointment
+        </a>
+
     </div>
 </div>
 
@@ -170,6 +221,11 @@ footer {
     <h2>Dr. Nagendra Chauhan, B.D.S.</h2>
     <p>Dental Surgeon & Implantologist</p>
     <p>AOI | ISDID | IDA (Life Member)</p>
+    <div style="font-size:1.1rem;margin-top:15px;">
+⭐ 15+ Years Experience &nbsp; | &nbsp;
+🦷 5000+ Happy Patients &nbsp; | &nbsp;
+💯 Modern Dental Care
+</div>
 </section>
 
 <!-- SERVICES -->
