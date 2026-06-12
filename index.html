@@ -5,12 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>दिव्य डेंटल क्लिनिक</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
 <style>
 
 /* GLOBAL */
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: #f4f8fb;
 }
 
@@ -21,24 +25,25 @@ body {
     z-index: 10;
     background: linear-gradient(135deg, #023e8a, #0077b6);
     color: white;
-    padding: 16px 20px;
+    padding: 14px 20px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .top-navbar h2 {
     margin: 0;
-    font-size: 1.8rem;
+    font-size: 1.65rem;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 0.8px;
+    font-family: 'Playfair Display', serif;
 }
 
 .top-navbar p {
-    margin: 5px 0 0 0;
-    font-size: 1rem;
+    margin: 4px 0 0 0;
+    font-size: 0.95rem;
     font-weight: 500;
-    color: rgba(255,255,255,0.9);
-    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.95);
+    letter-spacing: 0.4px;
 }
 
 /* NAVBAR */
@@ -70,7 +75,7 @@ body {
     overflow: hidden;
 }
 
-/* Dark overlay for text readability only */
+/* Minimal overlay for text readability only */
 .hero::before {
     content: '';
     position: absolute;
@@ -78,7 +83,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.1);
     pointer-events: none;
 }
 
@@ -101,13 +106,14 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(2.5rem, 7vw, 5rem);
-    font-weight: 900;
-    margin: 0 0 20px 0;
-    text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
-    line-height: 1.1;
-    letter-spacing: -1px;
+    font-size: clamp(1.8rem, 5.5vw, 3.2rem);
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    line-height: 1.2;
+    letter-spacing: -0.3px;
     animation: slideDown 1s ease-out;
+    font-family: 'Playfair Display', serif;
 }
 
 @keyframes slideDown {
@@ -122,12 +128,12 @@ body {
 }
 
 .tagline {
-    font-size: clamp(1.1rem, 2.5vw, 1.7rem);
-    margin: 0 0 30px 0;
-    line-height: 1.8;
+    font-size: clamp(0.9rem, 1.8vw, 1.2rem);
+    margin: 0 0 22px 0;
+    line-height: 1.5;
     color: rgba(255,255,255,0.98);
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
     animation: fadeIn 1.4s ease-out 0.2s both;
 }
 
@@ -142,12 +148,12 @@ body {
 
 .btn {
     background: linear-gradient(135deg, #00b4d8, #0077b6);
-    padding: 18px 45px;
+    padding: 14px 38px;
     border-radius: 50px;
     color: white;
     text-decoration: none;
-    font-size: 1.15rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    font-weight: 600;
     display: inline-block;
     box-shadow: 0 10px 30px rgba(0, 116, 182, 0.4), 0 0 20px rgba(0, 180, 216, 0.2);
     border: 2px solid rgba(255,255,255,0.15);
