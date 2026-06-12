@@ -3,21 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>दिव्य डेंटल क्लिनिक</title>
-    /* PREMIUM CLINIC RIBBON */
-.clinic-ribbon{
-    display:inline-block;
-    background:linear-gradient(135deg,#023e8a,#0077b6);
-    color:#fff;
-    padding:12px 32px;
-    border-radius:50px;
-    font-size:1.35rem;
-    font-weight:600;
-    letter-spacing:1px;
-    margin-bottom:25px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
-}
 
 <style>
 
@@ -64,29 +50,37 @@ body {
     font-weight: 800;
     margin-bottom: 15px;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    line-height: 1.1;
 }
 
-.hero .clinic-name {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    color: #ffd60a;
-    font-weight: 700;
-    margin-bottom: 15px;
+.clinic-ribbon {
+    display: inline-block;
+    background: linear-gradient(135deg, #023e8a, #0077b6);
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 50px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-.hero p {
+.tagline {
     font-size: clamp(1.2rem, 2.5vw, 1.8rem);
     margin-bottom: 25px;
     line-height: 1.6;
+    color: rgba(255,255,255,0.92);
 }
 
-.hero .doctor {
+.doctor {
     font-size: 1.3rem;
     margin-bottom: 30px;
     color: #caf0f8;
 }
 
 .btn {
-    background: linear-gradient(135deg,#00b4d8,#0077b6);
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
     padding: 16px 35px;
     border-radius: 50px;
     color: white;
@@ -107,6 +101,38 @@ section {
 /* HEADER INFO */
 .header-info {
     text-align: center;
+}
+
+.header-info h2 {
+    color: #023e8a;
+    font-size: 2.2rem;
+}
+
+.designation {
+    font-size: 1.2rem;
+    color: #444;
+}
+
+.membership {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.highlights span {
+    background: white;
+    padding: 12px 22px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    color: #023e8a;
+    font-weight: 600;
 }
 
 /* PREMIUM SERVICES */
@@ -136,7 +162,7 @@ section {
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
 }
 
@@ -199,67 +225,6 @@ footer {
 }
 
 .call a { background: #0077b6; }
-    .hero-content{
-    max-width:900px;
-}
-
-.clinic-name{
-    font-size:1.6rem;
-    font-weight:600;
-    color:#ffffff;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-size:clamp(3rem,6vw,5rem);
-    font-weight:700; 
-    margin-bottom:15px;
-    line-height:1.1;
-}
-
-.tagline{
-    font-size:1.2rem;
-    color:rgba(255,255,255,0.92);
-    margin-bottom:25px;
-}
-
-.doctor{
-    font-size:1.3rem;
-    color:#caf0f8;
-    margin-bottom:30px;
-}
-
-.header-info h2{
-    color:#023e8a;
-    font-size:2.2rem;
-}
-
-.designation{
-    font-size:1.2rem;
-    color:#444;
-}
-
-.membership{
-    color:#666;
-    margin-bottom:25px;
-}
-
-.highlights{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-    margin-top:20px;
-}
-
-.highlights span{
-    background:white;
-    padding:12px 22px;
-    border-radius:50px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    color:#023e8a;
-    font-weight:600;
-}
 
 </style>
 </head>
@@ -267,20 +232,21 @@ footer {
 <body>
 
 <div class="hero">
-  <div class="clinic-ribbon">
-    दिव्य डेंटल क्लिनिक
-</div>
-
-<h1>Excellence in Dental Care</h1>
-
-<p class="tagline">
-    Modern Technology • Trusted Care • Beautiful Smiles
-</p>
-
-<a href="tel:9415964504" class="btn">
-    📞 Book Appointment
-</a>
+  <div class="hero-content">
+    <div class="clinic-ribbon">
+      दिव्य डेंटल क्लिनिक
     </div>
+
+    <h1>Excellence in Dental Care</h1>
+
+    <p class="tagline">
+      Modern Technology • Trusted Care • Beautiful Smiles
+    </p>
+
+    <a href="tel:9415964504" class="btn">
+      📞 Book Appointment
+    </a>
+  </div>
 </div>
 
 <section class="header-info">
@@ -337,9 +303,9 @@ footer {
 <section>
 <h2>Gallery</h2>
 <div class="grid">
-<img src="IMG_20250830_184129621(1).jpg">
-<img src="IMG_20260120_162030193.jpg">
-<img src="IMG_20260210_131641255.jpg">
+<img src="IMG_20250830_184129621(1).jpg" alt="Clinic Image 1">
+<img src="IMG_20260120_162030193.jpg" alt="Clinic Image 2">
+<img src="IMG_20260210_131641255.jpg" alt="Clinic Image 3">
 </div>
 </section>
 
@@ -347,13 +313,13 @@ footer {
 <section>
 <h2>Before & After Treatment</h2>
 <div class="grid">
-<img src="IMG_20210913_141146-COLLAGE.jpg">
-<img src="20230618_225728-COLLAGE(1).jpg">
-<img src="20230618_224305-COLLAGE(1).jpg">
-<img src="20230808_155825-COLLAGE(1).jpg">
-<img src="20231029_115022-COLLAGE.jpg">
-<img src="Stain.jpg">  
-<img src="IMG_20250621_132154342-COLLAGE.jpg">
+<img src="IMG_20210913_141146-COLLAGE.jpg" alt="Before After 1">
+<img src="20230618_225728-COLLAGE(1).jpg" alt="Before After 2">
+<img src="20230618_224305-COLLAGE(1).jpg" alt="Before After 3">
+<img src="20230808_155825-COLLAGE(1).jpg" alt="Before After 4">
+<img src="20231029_115022-COLLAGE.jpg" alt="Before After 5">
+<img src="Stain.jpg" alt="Before After 6">  
+<img src="IMG_20250621_132154342-COLLAGE.jpg" alt="Before After 7">
 </div>
 </section>
 
