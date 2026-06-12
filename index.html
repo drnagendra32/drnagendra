@@ -186,6 +186,67 @@ footer {
 }
 
 .call a { background: #0077b6; }
+    .hero-content{
+    max-width:900px;
+}
+
+.clinic-name{
+    font-size:1.6rem;
+    font-weight:600;
+    color:#ffffff;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(3rem,6vw,5rem);
+    font-weight:700;
+    margin-bottom:15px;
+    line-height:1.1;
+}
+
+.tagline{
+    font-size:1.2rem;
+    color:rgba(255,255,255,0.92);
+    margin-bottom:25px;
+}
+
+.doctor{
+    font-size:1.3rem;
+    color:#caf0f8;
+    margin-bottom:30px;
+}
+
+.header-info h2{
+    color:#023e8a;
+    font-size:2.2rem;
+}
+
+.designation{
+    font-size:1.2rem;
+    color:#444;
+}
+
+.membership{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.highlights{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.highlights span{
+    background:white;
+    padding:12px 22px;
+    border-radius:50px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    color:#023e8a;
+    font-weight:600;
+}
 
 </style>
 </head>
@@ -196,13 +257,13 @@ footer {
     <div class="hero-content">
 
         <div class="clinic-name">
-            🦷 दिव्य डेंटल क्लिनिक
+            दिव्य डेंटल क्लिनिक
         </div>
 
-        <h1>Your Smile, Our Priority</h1>
+        <h1>Excellence in Dental Care</h1>
 
-        <p>
-            Advanced Dental Care • Dental Implants • Root Canal • Zirconia Crowns
+        <p class="tagline">
+            Dental Implants • Root Canal Treatment • Zirconia Crowns • Cosmetic Dentistry
         </p>
 
         <div class="doctor">
@@ -211,21 +272,30 @@ footer {
         </div>
 
         <a href="tel:9415964504" class="btn">
-            📞 Book Appointment
+            Book Appointment
         </a>
 
     </div>
 </div>
 
 <section class="header-info">
+
     <h2>Dr. Nagendra Chauhan, B.D.S.</h2>
-    <p>Dental Surgeon & Implantologist</p>
-    <p>AOI | ISDID | IDA (Life Member)</p>
-    <div style="font-size:1.1rem;margin-top:15px;">
-⭐ 15+ Years Experience &nbsp; | &nbsp;
-🦷 5000+ Happy Patients &nbsp; | &nbsp;
-💯 Modern Dental Care
-</div>
+
+    <p class="designation">
+        Dental Surgeon & Implantologist
+    </p>
+
+    <p class="membership">
+        AOI • ISDID • IDA (Life Member)
+    </p>
+
+    <div class="highlights">
+        <span>⭐ 15+ Years Experience</span>
+        <span>🦷 5000+ Happy Patients</span>
+        <span>💯 Modern Dental Care</span>
+    </div>
+
 </section>
 
 <!-- SERVICES -->
@@ -338,7 +408,7 @@ Get Directions
     </a>
 
 </section>
-<<footer>
+<footer>
     <h3>दिव्य डेंटल क्लिनिक</h3>
     <p>Near Sarvodaya Inter College, Ghosi, Uttar Pradesh 275105</p>
     <p>📞 9415964504</p>
