@@ -1,0 +1,192 @@
+@import url('variables.css');
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--neutral-bg);
+    color: var(--neutral-dark);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .display-font {
+    font-family: var(--font-heading);
+    color: var(--neutral-dark);
+}
+
+/* Premium Top Utilities Bar */
+.top-bar {
+    background-color: var(--primary-emerald);
+    color: var(--secondary-white);
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar a {
+    color: var(--secondary-white);
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+
+.top-bar a:hover {
+    color: var(--accent-gold);
+}
+
+/* Glassmorphic Navbar Implementation */
+.navbar-premium {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 118, 110, 0.08);
+    transition: var(--transition-smooth);
+    padding: 1rem 0;
+}
+
+.navbar-premium.scrolled {
+    padding: 0.6rem 0;
+    box-shadow: var(--shadow-md);
+}
+
+.nav-link-premium {
+    font-weight: 500;
+    color: var(--neutral-dark) !important;
+    padding: 0.5rem 1.2rem !important;
+    position: relative;
+    transition: var(--transition-fast);
+}
+
+.nav-link-premium::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1.2rem;
+    right: 1.2rem;
+    height: 2px;
+    background-color: var(--accent-gold);
+    transform: scaleX(0);
+    transition: var(--transition-smooth);
+}
+
+.nav-link-premium:hover::after,
+.nav-link-premium.active::after {
+    transform: scaleX(1);
+}
+
+/* Buttons - Premium Healthcare Aesthetic */
+.btn-emerald {
+    background-color: var(--primary-emerald);
+    color: var(--secondary-white);
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--primary-emerald);
+    transition: var(--transition-smooth);
+}
+
+.btn-emerald:hover {
+    background-color: var(--primary-emerald-hover);
+    color: var(--secondary-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-gold-outline {
+    background-color: transparent;
+    color: var(--accent-gold);
+    font-weight: 500;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    border: 1px solid var(--accent-gold);
+    transition: var(--transition-smooth);
+}
+
+.btn-gold-outline:hover {
+    background-color: var(--accent-gold);
+    color: var(--neutral-dark);
+    transform: translateY(-2px);
+}
+
+/* Language Switcher */
+.lang-switcher .btn {
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid var(--neutral-border);
+    padding: 0.25rem 0.75rem;
+}
+
+.lang-switcher .btn.active {
+    background-color: var(--primary-emerald);
+    color: var(--secondary-white);
+    border-color: var(--primary-emerald);
+}
+
+/* Sections Base Styling */
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.75rem;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    margin-top: 1rem;
+}
+
+/* Card System */
+.premium-card {
+    background: var(--secondary-white);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-smooth);
+}
+
+.premium-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Case Studies Section UI Component */
+.case-tabs .nav-link {
+    color: var(--neutral-dark);
+    border: 1px solid var(--neutral-border);
+    margin-right: 0.5rem;
+    border-radius: 4px;
+    background-color: var(--secondary-white);
+}
+
+.case-tabs .nav-link.active {
+    background-color: var(--primary-emerald) !important;
+    color: var(--secondary-white) !important;
+    border-color: var(--primary-emerald);
+}
+
+.img-compare-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.case-badge {
+    position: absolute;
+    top: 10px;
+    background: rgba(15, 118, 110, 0.9);
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.badge-before { left: 10px; }
+.badge-after { right: 10px; }
