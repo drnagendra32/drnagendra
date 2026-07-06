@@ -12,6 +12,20 @@ function doPost(e) {
   const whatsappDoctorTemplateName = 'new_appointment_alert';
   const fast2SmsApiKey = '';
 
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(15000); // Wait up to 15 seconds for other concurrent requests to finish
+  } catch (err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({
+        status: false,
+        success: false,
+        message: 'System is busy processing another booking. Please try again in a moment.',
+        error: 'System busy'
+      }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+
   try {
     const payload = parsePayload(e);
     const spreadsheet = SpreadsheetApp.openById(sheetId);
@@ -151,8 +165,22 @@ function doPost(e) {
       }
     }
 
-    // Pre-generate token to save it into the spreadsheet
-    const token = 'DDC-' + String(lastRow + 1000 + 1);
+    // Calculate the next token ID based on existing tokens in the sheet
+    let maxTokenNum = 1000;
+    const tokColIdx = headerMap['token'] ?? headerMap['booking token'] ?? headerMap['token id'];
+    if (lastRow > 1 && tokColIdx !== undefined) {
+      const tokenValues = sheet.getRange(2, tokColIdx + 1, lastRow - 1, 1).getValues();
+      for (let i = 0; i < tokenValues.length; i++) {
+        const t = tokenValues[i][0];
+        if (t && typeof t === 'string' && t.startsWith('DDC-')) {
+          const num = parseInt(t.substring(4), 10);
+          if (!isNaN(num) && num > maxTokenNum) {
+            maxTokenNum = num;
+          }
+        }
+      }
+    }
+    const token = 'DDC-' + String(maxTokenNum + 1);
 
     // Set parameters in their correct columns based on headers
     setVal(['token', 'booking token', 'token id'], token);
@@ -207,6 +235,10 @@ function doPost(e) {
         error: err.message
       }))
       .setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    if (lock) {
+      lock.releaseLock();
+    }
   }
 }
 
