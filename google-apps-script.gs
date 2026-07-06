@@ -1,5 +1,5 @@
 function doPost(e) {
-  const sheetId = '1GaulhFWl0recYB6DwtZ0dyBwRGoSE8X7FjCMBGxvT1Q';
+  const sheetId = '1cY9edL6177CGhRcXeoFq_0xlbFohqSWHpR-vFP40oQU';
   const sheetName = 'Appointments';
   const clinicMobileNumber = '9415964504';
   const clinicWhatsAppNumber = '919415964504';
@@ -211,7 +211,7 @@ function doPost(e) {
 }
 
 function doGet(e) {
-  const sheetId = '1GaulhFWl0recYB6DwtZ0dyBwRGoSE8X7FjCMBGxvT1Q';
+  const sheetId = '1cY9edL6177CGhRcXeoFq_0xlbFohqSWHpR-vFP40oQU';
   const sheetName = 'Appointments';
 
   try {
