@@ -179,6 +179,9 @@ function doPost(e) {
           }
         }
       }
+    } else if (lastRow > 1) {
+      // Fallback: If no token column is found but rows exist, use lastRow to guarantee unique tokens
+      maxTokenNum = 1000 + lastRow - 1;
     }
     const token = 'DDC-' + String(maxTokenNum + 1);
 
